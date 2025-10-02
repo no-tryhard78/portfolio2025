@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+Voici ton <head> corrigé et optimisé :
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de QD - Étudiant en Licence Pro Commerciale, alternant chez Kisdis/AGSCOM, passionné de tech et entrepreneur.">
+  <meta name="keywords" content="commercial, tech, alternance, fintech, IA, développement">
+  <meta property="og:title" content="QD - Portfolio Commercial & Tech">
+  <meta property="og:description" content="Découvrez mon parcours, mes compétences et mes projets">
+  <meta property="og:type" content="website">
+  
+  <title>QD - Portfolio Commercial & Tech</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script JS -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-logo">QD</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#hero" class="logo">QD</a>
+        <ul class="nav-links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-image">QD</div>
+            <h1>QD</h1>
+            <p class="subtitle">Étudiant Commercial • Entrepreneur Tech • Passionné d'Innovation</p>
+            <p class="tagline">Transformer les opportunités en succès, du terrain à la technologie</p>
+            <div class="cta-buttons">
+                <a href="#parcours" class="btn btn-primary">Découvrir mon parcours</a>
+                <a href="#" class="btn btn-secondary" onclick="downloadCV()">Télécharger mon CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title reveal">Qui suis-je ?</h2>
+        <div class="about-content reveal">
+            <p>
+                Âgé de 21 ans, je suis étudiant en Licence Professionnelle Commerciale à l'ILEPS, en alternance chez Kisdis/AGSCOM. Passionné par la tech et l'entrepreneuriat, je combine mon expertise commerciale avec ma curiosité pour l'innovation digitale.
+            </p>
+            <p>
+                Au-delà du commerce, je suis un sportif engagé avec une discipline de haut niveau au football (3 entraînements par semaine), et je développe actuellement une application de trading automatisé utilisant l'intelligence artificielle. Ma force ? Allier rigueur commerciale, vision entrepreneuriale et esprit d'équipe.
+            </p>
+            <p>
+                ⚽ Fun fact : Supporter inconditionnel du PSG, le football m'a appris la persévérance, la stratégie et le travail d'équipe - des valeurs que j'applique chaque jour dans ma vie professionnelle.
+            </p>
+
+            <div class="qualities">
+                <div class="quality-card reveal">
+                    <div class="quality-icon">🎯</div>
+                    <h3>Orienté Résultats</h3>
+                    <p>Contribution à un CA de 200K€/an chez Kisdis/AGSCOM grâce à une approche commerciale structurée et performante.</p>
+                </div>
+                <div class="quality-card reveal">
+                    <div class="quality-icon">💡</div>
+                    <h3>Innovant</h3>
+                    <p>Développement d'une application de trading IA, preuve de ma capacité à transformer des idées en projets concrets.</p>
+                </div>
+                <div class="quality-card reveal">
+                    <div class="quality-icon">🤝</div>
+                    <h3>Esprit d'Équipe</h3>
+                    <p>Formation sportive d'excellence qui forge mon sens du collectif et ma capacité à performer sous pression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours Timeline -->
+    <section id="parcours">
+        <h2 class="section-title reveal">Mon Parcours</h2>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-date">2024 - Présent</div>
+                    <h3>Alternant Commercial - Kisdis/AGSCOM</h3>
+                    <p>Vente de logiciels d'affichage dynamique (Kisdis) et solutions triple play (AGSCOM). Gestion complète du cycle commercial : prospection, négociation, gestion de contrats via Salesforce. Contribution active au développement du CA (≈200K€/an).</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-date">2023 - 2025</div>
+                    <h3>Licence Pro Commerciale - ILEPS</h3>
+                    <p>Formation en alternance alliant compétences commerciales, gestion de la relation client et stratégies de développement commercial. Projet entrepreneurial marquant : création d'une application de trading automatisé avec IA.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-date">2022</div>
+                    <h3>Baccalauréat STMG - Mention</h3>
+                    <p>Obtention du Bac Sciences et Technologies du Management et de la Gestion avec mention. Première étape d'un parcours orienté vers le commerce et la gestion d'entreprise.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-content">
+                    <div class="timeline-date">En cours</div>
+                    <h3>Projet Entrepreneurial - Application Trading IA</h3>
+                    <p>Développement d'une application de trading automatisé intégrant l'intelligence artificielle, avec système de notifications de stratégies et mode simulation pour l'entraînement. Codé sur VS Code, ce projet reflète ma passion pour la fintech et l'innovation.</p>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title reveal">Mes Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon">💼</div>
+                <h3>Compétences Commerciales</h3>
+                <ul class="skill-list">
+                    <li>Prospection BtoB</li>
+                    <li>Négociation commerciale</li>
+                    <li>Gestion de la relation client</li>
+                    <li>Suivi de contrats et devis</li>
+                    <li>Communication persuasive</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon">⚙️</div>
+                <h3>Outils & Logiciels</h3>
+                <ul class="skill-list">
+                    <li>Salesforce CRM</li>
+                    <li>Microsoft Excel</li>
+                    <li>Canva (design)</li>
+                    <li>VS Code (développement)</li>
+                </ul>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon">🌟</div>
+                <h3>Soft Skills</h3>
+                <ul class="skill-list">
+                    <li>Organisation & rigueur</li>
+                    <li>Persévérance</li>
+                    <li>Esprit d'équipe</li>
+                    <li>Curiosité & apprentissage</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box reveal">
+                <div class="stat-number" data-target="200">0</div>
+                <div class="stat-label">K€ de CA contribué</div>
+            </div>
+            <div class="stat-box reveal">
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-label">Entraînements / semaine</div>
+            </div>
+            <div class="stat-box reveal">
+                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-label">Projet entrepreneurial</div>
+            </div>
+            <div class="stat-box reveal">
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-label">% Motivation</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title reveal">Réussites & Projets</h2>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-image">🚀</div>
+                <div class="project-content">
+                    <h3>Application Trading Automatisé IA</h3>
+                    <p>Développement d'une plateforme complète de trading automatisé intégrant l'intelligence artificielle. Fonctionnalités : notifications de stratégies en temps réel, mode simulation pour l'entraînement, interface intuitive.</p>
+                    <div class="project-tag">IA</div>
+                    <div class="project-tag">Fintech</div>
+                    <div class="project-tag">Entrepreneuriat</div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">💼</div>
+                <div class="project-content">
+                    <h3>Alternance Kisdis/AGSCOM</h3>
+                    <p>Intégration réussie dans une PME tech du secteur B2B. Gestion autonome du cycle commercial complet, utilisation avancée de Salesforce, contribution significative au CA annuel (≈200K€).</p>
+                    <div class="project-tag">Commerce B2B</div>
+                    <div class="project-tag">SaaS</div>
+                    <div class="project-tag">CRM</div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">🎓</div>
+                <div class="project-content">
+                    <h3>Bac STMG avec Mention</h3>
+                    <p>Obtention du Baccalauréat STMG avec mention, démontrant ma capacité à exceller académiquement tout en développant mes compétences en management et gestion.</p>
+                    <div class="project-tag">Excellence</div>
+                    <div class="project-tag">Management</div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">⚽</div>
+                <div class="project-content">
+                    <h3>Football de Compétition</h3>
+                    <p>Engagement sportif de haut niveau avec 3 entraînements hebdomadaires et matchs en compétition. Développement de valeurs essentielles : discipline, persévérance, travail d'équipe.</p>
+                    <div class="project-tag">Sport</div>
+                    <div class="project-tag">Performance</div>
+                    <div class="project-tag">Leadership</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aspirations Section -->
+    <section id="aspirations">
+        <h2 class="section-title reveal">Mes Aspirations</h2>
+        <div class="aspirations-content">
+            <div class="aspiration-item reveal">
+                <h3><span>🎯</span> Poste Recherché</h3>
+                <p>Je vise un rôle hybride entre commerce et innovation, où je pourrai exploiter mes compétences commerciales tout en contribuant au développement de solutions tech innovantes. Un poste de Business Developer, Account Manager ou Commercial Tech dans une structure dynamique.</p>
+            </div>
+            <div class="aspiration-item reveal">
+                <h3><span>💡</span> Secteurs d'Intérêt</h3>
+                <p>Particulièrement attiré par les secteurs en pleine transformation digitale : <strong>Tech/SaaS</strong>, <strong>Fintech</strong>, <strong>Intelligence Artificielle</strong>, et les solutions innovantes B2B. Je souhaite évoluer dans un environnement où technologie et stratégie commerciale se rencontrent.</p>
+            </div>
+            <div class="aspiration-item reveal">
+                <h3><span>🚀</span> Job de Rêve</h3>
+                <p>Intégrer une startup ou scale-up en forte croissance, dans un rôle qui combine développement commercial et participation à la stratégie produit. À terme, lancer ma propre entreprise dans la fintech, en m'appuyant sur mon expérience commerciale et technique.</p>
+            </div>
+            <div class="aspiration-item reveal">
+                <h3><span>🌟</span> Prochain Challenge</h3>
+                <p>Finaliser et lancer mon application de trading IA, tout en continuant à performer dans mon alternance. Objectif 2025 : décrocher un premier poste qui me permettra d'allier passion pour la tech et expertise commerciale.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2 class="section-title reveal">Blog & Actualités</h2>
+        <div class="blog-grid">
+            <div class="blog-card reveal">
+                <div class="blog-date">📅 Octobre 2024</div>
+                <div class="blog-content">
+                    <h3>Lancement du développement de l'app Trading IA</h3>
+                    <p>Début du développement intensif de mon application de trading automatisé. Premières fonctionnalités : système de notifications et algorithme de détection de tendances. Objectif : version beta pour Q1 2025.</p>
+                </div>
+            </div>
+            <div class="blog-card reveal">
+                <div class="blog-date">📅 Septembre 2024</div>
+                <div class="blog-content">
+                    <h3>Début de l'alternance chez Kisdis/AGSCOM</h3>
+                    <p>Premier jour en tant qu'alternant commercial ! Découverte de l'univers des logiciels B2B et immersion dans Salesforce. Hâte de contribuer au développement commercial de l'entreprise.</p>
+                </div>
+            </div>
+            <div class="blog-card reveal">
+                <div class="blog-date">📅 Juin 2024</div>
+                <div class="blog-content">
+                    <h3>Réflexions sur l'entrepreneuriat tech</h3>
+                    <p>Après plusieurs mois de réflexion, j'ai décidé de me lancer dans le développement d'une solution fintech. Entre études, sport et alternance, l'organisation sera clé. Challenge accepted!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title reveal">Contactez-moi</h2>
+        <div class="contact-container reveal">
+            <div class="contact-form">
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">
+                    Vous avez un projet, une opportunité ou simplement envie d'échanger ? N'hésitez pas à me contacter !
+                </p>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Votre message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
+                </form>
+
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn">in</a>
+                    <a href="https://github.com" target="_blank" class="social-link" title="GitHub">{ }</a>
+                    <a href="mailto:contact@qd-portfolio.com" class="social-link" title="Email">@</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-quote">
+            "Le succès, c'est d'aller d'échec en échec sans perdre son enthousiasme." — Winston Churchill
+        </div>
+        <div class="footer-links">
+            <a href="#hero">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#parcours">Parcours</a>
+            <a href="#skills">Compétences</a>
+            <a href="#projects">Projets</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.8;">
+            © 2024 QD - Tous droits réservés | Conçu avec passion ⚽💼
+        </p>
+    </footer>
+
+ 
+</body>
+</html>
