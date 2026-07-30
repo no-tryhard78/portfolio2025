@@ -1,143 +1,110 @@
+/* ════════════════════════════════════════
+   QUENTIN DUPLESSIS — script.js
+════════════════════════════════════════ */
 
-        // Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 1500);
-        });
+// ── Loader ──
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+  }, 1400);
+});
 
-        // Create particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 30; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.width = Math.random() * 10 + 5 + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = Math.random() * 10 + 10 + 's';
-                container.appendChild(particle);
-            }
-        }
-        createParticles();
+// ── Scroll progress bar ──
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress  = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('progress-bar').style.width = progress + '%';
+});
 
-        // Theme Toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            const btn = document.querySelector('.theme-toggle');
-            btn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-        }
+// ── Navbar: transparent over hero, solid on scroll ──
+const navbar = document.getElementById('navbar');
 
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        document.querySelector('.theme-toggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
-        // Mobile Menu
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        }
+// ── Theme toggle ──
+function toggleTheme() {
+  const html  = document.documentElement;
+  const next  = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  document.querySelector('.theme-toggle').textContent = next === 'dark' ? '☀️' : '🌙';
+}
 
-        // Close menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
+// Apply saved theme on load
+const saved = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', saved);
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.theme-toggle');
+  if (btn) btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+});
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
+// ── Mobile menu ──
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
 
-        // Scroll reveal animation
-        function reveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(element => {
-                const windowHeight = window.innerHeight;
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < windowHeight - elementVisible) {
-                    element.classList.add('active');
-                }
-            });
-        }
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('active');
+  });
+});
 
-        window.addEventListener('scroll', reveal);
-        reveal();
+// ── Smooth scroll ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 
-        // Counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000;
-                const increment = target / (duration / 16);
-                let current = 0;
-                
-                const updateCounter = () => {
-                    current += increment;
-                    if (current < target) {
-                        counter.textContent = Math.floor(current);
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target;
-                    }
-                };
-                
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            updateCounter();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                });
-                
-                observer.observe(counter);
-            });
-        }
-        animateCounters();
+// ── Scroll reveal ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-        // Download CV
-        function downloadCV() {
-            alert('Fonctionnalité à venir : Le CV sera téléchargeable prochainement !');
-        }
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // Form submission
-        function handleSubmit(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-            
-            alert(`Merci ${data.name} ! Votre message a été envoyé avec succès. Je vous recontacte très vite !`);
-            e.target.reset();
-        }
+// ── Counter animation (supports data-prefix / data-suffix) ──
+function animateCounter(el) {
+  const target   = parseInt(el.getAttribute('data-target'), 10);
+  const prefix   = el.getAttribute('data-prefix') || '';
+  const suffix   = el.getAttribute('data-suffix') || '';
+  const duration = 1800;
+  const steps    = 60;
+  const increment = target / steps;
+  let current = 0;
+  let step = 0;
 
-        // Navbar scroll effect
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > lastScroll && currentScroll > 100) {
-                nav.style.transform = 'translateY(-100%)';
-            } else {
-                nav.style.transform = 'translateY(0)';
-            }
-            lastScroll = currentScroll;
-        });
+  const timer = setInterval(() => {
+    step++;
+    current = Math.min(Math.round(increment * step), target);
+    el.textContent = prefix + current + suffix;
+    if (step >= steps) clearInterval(timer);
+  }, duration / steps);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObserver.observe(el));
