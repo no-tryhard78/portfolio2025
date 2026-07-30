@@ -4,400 +4,530 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Quentin Duplessis — Master Manager des Achats Internationaux (Kedge Business School). 2 ans d'expérience achats chez KISDIS, fournisseurs internationaux, Python & IA. Disponible stage 6 mois jan.–juin 2027.">
-  <meta name="keywords" content="achats internationaux, sourcing, négociation, Kedge, alternance, Python, IA, stage 2027, fournisseurs, procurement">
-  <meta property="og:title" content="Quentin Duplessis — Achats Internationaux">
-  <meta property="og:description" content="Master Achats Internationaux • Kedge BS • Disponible stage jan.–juin 2027">
+  <meta name="description" content="Quentin Duplessis — Master Manager des Achats Internationaux, Kedge Business School. 2 ans d'expérience achats chez KISDIS, sourcing international, fournisseurs hors Europe. Disponible stage 6 mois jan.–juin 2027.">
+  <meta name="keywords" content="achats internationaux, procurement, sourcing, Kedge Business School, stage 2027, LVMH, Airbus, TotalEnergies, Python, supply chain">
+
+  <meta property="og:title" content="Quentin Duplessis — Achats Internationaux · Kedge Business School">
+  <meta property="og:description" content="2 ans de terrain. Des fournisseurs hors Europe. Des outils que je construis moi-même. Stage jan.–juin 2027.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://no-tryhard78.github.io/portfolio2025/profil.jpg">
+  <meta property="og:url" content="https://no-tryhard78.github.io/portfolio2025/">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <title>Quentin Duplessis — Achats Internationaux</title>
+  <title>Quentin Duplessis — Achats Internationaux · Kedge BS</title>
 
-  <!-- Google Fonts -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Quentin Duplessis",
+    "jobTitle": "Étudiant Master Achats Internationaux",
+    "affiliation": { "@type": "EducationalOrganization", "name": "Kedge Business School" },
+    "email": "quent78.duplessis@gmail.com",
+    "url": "https://no-tryhard78.github.io/portfolio2025/",
+    "image": "https://no-tryhard78.github.io/portfolio2025/profil.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/quentin-duplessis-a22562272",
+      "https://github.com/no-tryhard78"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Script JS -->
   <script defer src="script.js"></script>
 </head>
 
 <body>
+
+  <!-- Scroll progress -->
+  <div id="progress-bar"></div>
+
   <!-- Loader -->
   <div id="loader">
-    <div class="loader-logo">QD</div>
+    <div class="loader-monogram">QD</div>
+    <div class="loader-line"></div>
   </div>
 
   <!-- Navigation -->
-  <nav>
+  <nav id="navbar">
     <a href="#hero" class="logo">QD</a>
     <ul class="nav-links">
-      <li><a href="#hero">Accueil</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#parcours">Parcours</a></li>
       <li><a href="#skills">Compétences</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#blog">Blog</a></li>
+      <li><a href="#projects">Réalisations</a></li>
+      <li><a href="#aspirations">Objectifs</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer le thème">🌙</button>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- ══════════════════════════════════════ HERO -->
   <section id="hero">
-    <div class="hero-bg">
-      <div class="particles" id="particles"></div>
-    </div>
+    <div class="hero-bg-gradient"></div>
     <div class="hero-content">
-      <div class="hero-image" data-aos="fade-down">
-        <img src="profil.jpg" alt="Quentin DUPLESSIS">
+      <div class="hero-image">
+        <img src="profil.jpg" alt="Quentin Duplessis" loading="eager">
       </div>
-      <h1>Quentin DUPLESSIS</h1>
-      <p class="subtitle">Master Achats Internationaux · Kedge Business School · Stage jan.–juin 2027</p>
-      <p class="tagline">2 ans de terrain. Des fournisseurs hors Europe. Des outils que je construis moi-même.</p>
-      <div class="cta-buttons">
-        <a href="#parcours" class="btn btn-primary">Découvrir mon parcours</a>
-        <a href="Cv Quentin Duplessis.pdf" class="btn btn-primary">Télécharger mon CV</a>
+      <p class="hero-tag">Kedge Business School · Paris</p>
+      <h1 class="hero-name">Quentin<br>Duplessis</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Master Manager des Achats Internationaux</p>
+      <p class="hero-tagline">2 ans de terrain. Des fournisseurs hors Europe. Des outils que je construis moi-même.</p>
+      <div class="badge-disponible">
+        <span class="badge-dot"></span>
+        Disponible — Stage jan. 2027 · Mobilité totale
       </div>
+      <div class="hero-ctas">
+        <a href="#parcours" class="btn-hero btn-hero-primary">Découvrir le parcours</a>
+        <a href="Cv Quentin Duplessis.pdf" download class="btn-hero btn-hero-secondary">Télécharger le CV</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- ══════════════════════════════════════ ABOUT -->
   <section id="about">
-    <h2 class="section-title reveal">Qui suis-je ?</h2>
-    <div class="about-content reveal">
-      <p>
-        Étudiant en Master Manager des Achats Internationaux à <strong>Kedge Business School</strong> (RNCP 7, triple accréditation AACSB/EQUIS/AMBA), je sors de 2 ans d'alternance chez <strong>KISDIS</strong> — une PME B2B où j'ai piloté 15+ projets achats end-to-end, géré des fournisseurs hors Europe en anglais, et réduit les coûts de 10 à 15% sur les commandes récurrentes.
-      </p>
-      <p>
-        Ce que le CV ne dit pas : j'ai appris Python en deux semaines pour passer un test CoderPad chez TotalEnergies. J'ai développé des outils d'automatisation avec Claude et Python pour optimiser mes propres process — suivi de performance, analyse de données, reporting automatique. Je construis des outils, pas juste des slides.
-      </p>
-      <p>
-        En parallèle, je gère ma propre micro-entreprise depuis juin 2023 — chef de rang dans des établissements gastronomiques parisiens (Laurent, Café de l'Homme, Hôtel Henri IV). C'est une école de rigueur et de réactivité que je retrouve dans la gestion fournisseurs.
-      </p>
+    <div class="sec-header reveal">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">À propos</h2>
+      <div class="sec-line"></div>
+    </div>
 
-      <div class="qualities">
-        <div class="quality-card reveal">
-          <div class="quality-icon">🎯</div>
-          <h3>Résultats chiffrés</h3>
-          <p>15+ projets achats pilotés (20–50k€/projet), réduction des coûts de 10–15%, 50+ prospects qualifiés avec 20% de taux de conversion.</p>
-        </div>
-        <div class="quality-card reveal">
-          <div class="quality-icon">🛠️</div>
-          <h3>Builder</h3>
-          <p>Python appris en 2 semaines pour un test CoderPad. Outils d'automatisation construits avec Python et IA. Je n'attends pas un outil — je le crée.</p>
-        </div>
-        <div class="quality-card reveal">
-          <div class="quality-icon">🌍</div>
-          <h3>Anglais terrain</h3>
-          <p>Emails, appels, documents techniques et gestion de litiges avec des fournisseurs hors Europe pendant 2 ans. Pas un cours — du quotidien.</p>
-        </div>
+    <p class="about-intro reveal">
+      Étudiant en <strong>Master Manager des Achats Internationaux à Kedge Business School</strong> (RNCP 7 — AACSB, EQUIS, AMBA), je sors de 2 ans d'alternance chez <strong>KISDIS</strong> — 15 projets achats pilotés de A à Z, des fournisseurs hors Europe coordonnés en anglais au quotidien, une réduction des coûts de 10 à 15% sur les commandes récurrentes. Ce portfolio est la traduction directe de cette expérience.
+    </p>
+
+    <div class="about-columns">
+      <div class="about-col reveal">
+        <p class="col-num">01 — Résultats</p>
+        <h3>Chiffrés & vérifiables</h3>
+        <p>15+ projets achats end-to-end, budgets 20–50k€. Réduction des coûts de 10 à 15% sur commandes récurrentes. 50+ prospects qualifiés avec un taux de conversion de 20%. Des nombres, pas des adjectifs.</p>
+      </div>
+      <div class="about-col reveal reveal-delay-1">
+        <p class="col-num">02 — Autonomie</p>
+        <h3>Builder, pas spectateur</h3>
+        <p>Python appris en deux semaines pour un test CoderPad chez TotalEnergies — pandas, normalisation, scoring pondéré. Outils d'automatisation construits avec Python et IA pour mes propres process achats. Je n'attends pas un outil, je le crée.</p>
+      </div>
+      <div class="about-col reveal reveal-delay-2">
+        <p class="col-num">03 — International</p>
+        <h3>Anglais opérationnel</h3>
+        <p>2 ans d'échanges quotidiens avec des fournisseurs hors Europe : emails de suivi, appels de négociation, documents techniques, gestion de litiges. Pas un cours. De l'opérationnel. Disponible pour un appel fournisseur anglophone aujourd'hui sans préparation.</p>
       </div>
     </div>
   </section>
 
-  <!-- Parcours Timeline -->
+  <!-- ══════════════════════════════════════ PARCOURS -->
   <section id="parcours">
-    <h2 class="section-title reveal">Mon Parcours</h2>
+    <div class="sec-header reveal">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Parcours</h2>
+      <div class="sec-line"></div>
+    </div>
+
     <div class="timeline">
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <div class="timeline-date">Sept. 2026 – 2028 · En cours</div>
-          <h3>Master Manager des Achats Internationaux — Kedge Business School</h3>
-          <p>Programme RNCP Niveau 7, triple accréditation AACSB, EQUIS, AMBA — Campus Paris. Stratégie achats, sourcing international, négociation tarifaire, analyse TCO, gestion des risques fournisseurs, supply chain globale, management de projet. <strong>Stage 6 mois inclus : disponible janvier 2027 – juin 2027.</strong></p>
+      <div class="t-item reveal">
+        <div class="t-meta">
+          <span class="t-year">2026 – 2028</span>
+          <span class="t-type">En cours</span>
         </div>
-        <div class="timeline-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="t-title">Master Manager des Achats Internationaux</h3>
+          <span class="t-org">Kedge Business School — Campus Paris</span>
+          <p class="t-desc">RNCP Niveau 7 · Triple accréditation AACSB, EQUIS, AMBA. Stratégie achats, sourcing international, négociation tarifaire, analyse TCO, gestion des risques fournisseurs, supply chain globale, management de projet.</p>
+          <span class="t-highlight">Stage disponible jan. – juin 2027</span>
+        </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <div class="timeline-date">Sept. 2024 – Août 2026 · Alternance 2 ans</div>
-          <h3>Commercial — Achats & Gestion de Projets Fournisseurs · KISDIS</h3>
-          <p>PME affichage dynamique B2B, Pontoise (95). Pilotage autonome de 15+ projets achats end-to-end : sourcing multi-sources (France et hors Europe), comparaison devis, sélection fournisseurs qualité/coût/délai, rédaction cahiers des charges — budgets 20k€ à 50k€. Interface fournisseurs en anglais sur l'ensemble des projets internationaux. Participation à la négociation tarifaire : -10 à -15% sur commandes récurrentes. Reporting KPIs en Excel avancé et outils Python/IA développés en autonomie.</p>
+      <div class="t-item reveal reveal-delay-1">
+        <div class="t-meta">
+          <span class="t-year">2024 – 2026</span>
+          <span class="t-type">Alternance 2 ans</span>
         </div>
-        <div class="timeline-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="t-title">Commercial — Achats & Projets Fournisseurs</h3>
+          <span class="t-org">KISDIS — Pontoise (95) · PME affichage dynamique B2B</span>
+          <p class="t-desc">Pilotage de 15+ projets achats end-to-end, budgets 20–50k€. Interface fournisseurs hors Europe en anglais sur l'ensemble des projets internationaux. Participation à la négociation tarifaire : −10 à −15% sur commandes récurrentes. Reporting KPIs en Excel avancé et développement d'outils Python/IA en autonomie pour automatiser le suivi de performance.</p>
+        </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <div class="timeline-date">Sept. 2023 – Juin 2026 · Alternance 2 ans</div>
-          <h3>Licence Pro — Commercialisation des Produits et Services Sportifs · CY-ILEPS / CY Cergy Paris Université</h3>
-          <p>RNCP Niveau 6. Formation en alternance alliant compétences commerciales B2B, négociation, gestion de projet et analyse de données — 2 ans en alternance chez KISDIS.</p>
+      <div class="t-item reveal reveal-delay-1">
+        <div class="t-meta">
+          <span class="t-year">2023 – 2026</span>
+          <span class="t-type">Alternance 2 ans</span>
         </div>
-        <div class="timeline-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="t-title">Licence Pro — Commercialisation des Produits et Services Sportifs</h3>
+          <span class="t-org">CY-ILEPS / CY Cergy Paris Université</span>
+          <p class="t-desc">RNCP Niveau 6. Commerce B2B, négociation, gestion de projet, analyse de données — 2 ans en alternance chez KISDIS.</p>
+        </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <div class="timeline-date">Juin 2023 – Aujourd'hui · Auto-entrepreneur</div>
-          <h3>Chef de Rang · Quentin Duplessis EI</h3>
-          <p>Établissements gastronomiques parisiens : Laurent, Café de l'Homme, Hôtel Henri IV, Victor. Coordination de service et management d'équipe (3–5 personnes). En parallèle de l'alternance — gestion autonome de facturation, clients, planning.</p>
+      <div class="t-item reveal reveal-delay-1">
+        <div class="t-meta">
+          <span class="t-year">2023 – auj.</span>
+          <span class="t-type">Auto-entrepreneur</span>
         </div>
-        <div class="timeline-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="t-title">Chef de Rang — Gastronomie Parisienne</h3>
+          <span class="t-org">Quentin Duplessis EI · Laurent, Café de l'Homme, Hôtel Henri IV, Victor</span>
+          <p class="t-desc">Management d'équipe (3–5 personnes) en établissements haut de gamme, en parallèle de l'alternance. Gestion autonome : facturation, clients, planning. Une école de rigueur et de standard d'excellence que je retrouve dans la gestion fournisseurs.</p>
+        </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <div class="timeline-date">Mai 2023 – Août 2024 · CDI partiel</div>
-          <h3>Conseiller de Vente · Go Sport — Orgeval (78)</h3>
-          <p>Gestion des stocks, SAV et relations fournisseurs — suivi des réassorts, retours et litiges.</p>
+      <div class="t-item reveal reveal-delay-1">
+        <div class="t-meta">
+          <span class="t-year">2023 – 2024</span>
+          <span class="t-type">CDI partiel</span>
         </div>
-        <div class="timeline-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="t-title">Conseiller de Vente</h3>
+          <span class="t-org">Go Sport — Orgeval (78)</span>
+          <p class="t-desc">Gestion des stocks, SAV et relations fournisseurs — suivi des réassorts, retours et litiges.</p>
+        </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <div class="timeline-date">Oct. 2022 – Avr. 2023 · CDD 6 mois</div>
-          <h3>Guichetier Accueil · BNP Paribas — Saint-Germain-en-Laye (78)</h3>
-          <p>Gestion administrative et documentaire en environnement réglementé — rigueur et conformité des procédures.</p>
+      <div class="t-item reveal reveal-delay-1">
+        <div class="t-meta">
+          <span class="t-year">2022 – 2023</span>
+          <span class="t-type">CDD 6 mois</span>
         </div>
-        <div class="timeline-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="t-title">Guichetier Accueil</h3>
+          <span class="t-org">BNP Paribas — Saint-Germain-en-Laye (78)</span>
+          <p class="t-desc">Gestion administrative et documentaire en environnement réglementé — rigueur et conformité des procédures.</p>
+        </div>
       </div>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <div class="timeline-date">2022</div>
-          <h3>Baccalauréat STMG — Mention</h3>
-          <p>Sciences et Technologies du Management et de la Gestion. Première étape d'un parcours orienté commerce, gestion et international.</p>
+      <div class="t-item reveal reveal-delay-1">
+        <div class="t-meta">
+          <span class="t-year">2022</span>
+          <span class="t-type">Diplôme</span>
         </div>
-        <div class="timeline-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3 class="t-title">Baccalauréat STMG — Mention</h3>
+          <span class="t-org">Sciences et Technologies du Management et de la Gestion</span>
+          <p class="t-desc">Point de départ d'un parcours orienté commerce international et gestion.</p>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- ══════════════════════════════════════ SKILLS -->
   <section id="skills">
-    <h2 class="section-title reveal">Mes Compétences</h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">🛒</div>
-        <h3>Achats & Sourcing</h3>
-        <ul class="skill-list">
-          <li>Sourcing fournisseurs France & international</li>
-          <li>Comparaison devis & évaluation fournisseurs</li>
-          <li>Négociation tarifaire (–10 à –15%)</li>
-          <li>Gestion budgétaire 20–50k€/projet</li>
-          <li>Analyse TCO & optimisation coûts</li>
-          <li>Contrôle qualité, coordination end-to-end</li>
-        </ul>
+    <div class="sec-header reveal">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">Compétences</h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="skills-layout">
+      <div class="reveal">
+        <p class="skill-col-title">Achats & Sourcing</p>
+        <div class="skill-item">
+          <span class="skill-name">Sourcing fournisseurs France & international</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Comparaison devis & évaluation fournisseurs</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Négociation tarifaire</span>
+          <span class="skill-detail">−10 à −15% sur commandes récurrentes</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Gestion budgétaire</span>
+          <span class="skill-detail">20–50k€ par projet</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Analyse TCO & optimisation coûts</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Coordination end-to-end, contrôle qualité</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Reporting KPIs & tableaux de bord</span>
+        </div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚙️</div>
-        <h3>Outils & Tech</h3>
-        <ul class="skill-list">
-          <li>Excel avancé (TCD, recherches V, tableaux de bord)</li>
-          <li>Python — intermédiaire (pandas, scoring, automatisation)</li>
-          <li>IA — Claude, GPT (outils et workflows)</li>
-          <li>Salesforce CRM</li>
-          <li>PowerPoint · ERP SAP (notions)</li>
-        </ul>
+
+      <div class="reveal reveal-delay-1">
+        <p class="skill-col-title">Outils & Tech</p>
+        <div class="skill-item">
+          <span class="skill-name">Excel avancé</span>
+          <span class="skill-detail">TCD, recherches V, tableaux de bord hebdomadaires</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Python</span>
+          <span class="skill-detail">Intermédiaire — pandas, automatisation, scoring</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">IA — Claude, GPT</span>
+          <span class="skill-detail">Workflows métier, génération de documents</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Salesforce CRM</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">PowerPoint</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">ERP SAP</span>
+          <span class="skill-detail">Notions</span>
+        </div>
       </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🌍</div>
-        <h3>Langues & Soft Skills</h3>
-        <ul class="skill-list">
-          <li>Français — natif</li>
-          <li>Anglais — B2, opérationnel (emails, appels, docs techniques)</li>
-          <li>Espagnol — A2</li>
-          <li>Apprentissage rapide & autonome</li>
-          <li>Gestion sous pression · Rigueur</li>
-          <li>Mobilité totale — France, Europe, International</li>
-        </ul>
+
+      <div class="reveal reveal-delay-2">
+        <p class="skill-col-title">Langues & Profil</p>
+        <div class="skill-item">
+          <span class="skill-name">Français</span>
+          <span class="skill-detail">Natif</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Anglais</span>
+          <span class="skill-detail">B2, opérationnel — emails, appels, documents techniques, litiges fournisseurs</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Espagnol</span>
+          <span class="skill-detail">A2</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Apprentissage autonome & rapide</span>
+          <span class="skill-detail">Python appris en 2 semaines pour un test CoderPad</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Mobilité totale</span>
+          <span class="skill-detail">France, Europe, International — prouvé en acte</span>
+        </div>
       </div>
     </div>
 
-    <div class="stats-container">
-      <div class="stat-box reveal">
-        <div class="stat-number" data-target="15">0</div>
+    <div class="stats-row">
+      <div class="stat-col reveal">
+        <div class="stat-num" data-target="15" data-suffix="+">0</div>
         <div class="stat-label">Projets achats pilotés</div>
       </div>
-      <div class="stat-box reveal">
-        <div class="stat-number" data-target="50">0</div>
+      <div class="stat-col reveal reveal-delay-1">
+        <div class="stat-num" data-target="50" data-suffix="+">0</div>
         <div class="stat-label">Prospects qualifiés</div>
       </div>
-      <div class="stat-box reveal">
-        <div class="stat-number" data-target="15">0</div>
-        <div class="stat-label">% Réduction coûts</div>
+      <div class="stat-col reveal reveal-delay-2">
+        <div class="stat-num" data-target="15" data-prefix="−" data-suffix="%">0</div>
+        <div class="stat-label">Réduction coûts</div>
       </div>
-      <div class="stat-box reveal">
-        <div class="stat-number" data-target="2">0</div>
+      <div class="stat-col reveal reveal-delay-3">
+        <div class="stat-num" data-target="2">0</div>
         <div class="stat-label">Ans d'expérience terrain</div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- ══════════════════════════════════════ PROJECTS -->
   <section id="projects">
-    <h2 class="section-title reveal">Réalisations</h2>
+    <div class="sec-header reveal">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Réalisations</h2>
+      <div class="sec-line"></div>
+    </div>
+
     <div class="projects-grid">
 
-      <div class="project-card reveal">
-        <div class="project-image">🛒</div>
-        <div class="project-content">
-          <h3>15+ Projets Achats End-to-End — KISDIS</h3>
-          <p>Pilotage autonome de projets achats de A à Z : sourcing multi-sources France et hors Europe, comparaison devis, sélection sur critères qualité/coût/délai, rédaction cahiers des charges, coordination jusqu'à la livraison. Budgets de 20k€ à 50k€ par projet.</p>
-          <div class="project-tag">Sourcing international</div>
-          <div class="project-tag">Gestion de projet</div>
-          <div class="project-tag">Négociation</div>
+      <div class="proj-card reveal" data-num="01">
+        <div class="proj-top">
+          <p class="proj-cat">Achats · KISDIS</p>
+          <h3 class="proj-title">15+ Projets Achats End-to-End</h3>
+          <p class="proj-desc">Pilotage autonome de A à Z : sourcing multi-sources France et hors Europe, comparaison devis, sélection fournisseurs qualité/coût/délai, rédaction cahiers des charges, coordination jusqu'à livraison. Budgets 20k€ à 50k€ par projet.</p>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Sourcing international</span>
+          <span class="proj-tag">Gestion de projet</span>
+          <span class="proj-tag">Négociation</span>
         </div>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-image">🛠️</div>
-        <div class="project-content">
-          <h3>Outils d'Automatisation Python & IA</h3>
-          <p>Développement en autonomie d'outils Python et IA (Claude) pour automatiser le suivi de performance, l'analyse de données et la génération de rapports. Python appris en 2 semaines pour passer un test CoderPad chez TotalEnergies — pandas, normalisation, scoring pondéré.</p>
-          <div class="project-tag">Python</div>
-          <div class="project-tag">IA — Claude</div>
-          <div class="project-tag">Automatisation</div>
+      <div class="proj-card reveal reveal-delay-1" data-num="02">
+        <div class="proj-top">
+          <p class="proj-cat">Tech · Autonomie</p>
+          <h3 class="proj-title">Outils Python & IA pour les achats</h3>
+          <p class="proj-desc">Développement d'outils d'automatisation pour le suivi de performance, l'analyse de données et la génération de rapports achats. Python maîtrisé en 2 semaines pour un test CoderPad TotalEnergies — pandas, normalisation, scoring pondéré.</p>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">IA</span>
+          <span class="proj-tag">Automatisation</span>
         </div>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-image">🌍</div>
-        <div class="project-content">
-          <h3>Interface Fournisseurs Hors Europe — Anglais Pro</h3>
-          <p>2 ans de relation fournisseurs internationaux en anglais : emails de suivi, appels de négociation, documents techniques, gestion de litiges et suivi des engagements. Pas un cours, pas une certification — du quotidien opérationnel.</p>
-          <div class="project-tag">Anglais B2 opérationnel</div>
-          <div class="project-tag">Relations fournisseurs</div>
-          <div class="project-tag">Gestion de litiges</div>
+      <div class="proj-card reveal reveal-delay-1" data-num="03">
+        <div class="proj-top">
+          <p class="proj-cat">International · Anglais</p>
+          <h3 class="proj-title">Interface fournisseurs hors Europe</h3>
+          <p class="proj-desc">2 ans d'échanges quotidiens en anglais avec des fournisseurs internationaux : emails, appels de négociation, documents techniques, gestion de litiges et suivi des engagements. Opérationnel sans préparation.</p>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Anglais B2</span>
+          <span class="proj-tag">Relations fournisseurs</span>
+          <span class="proj-tag">Litiges</span>
         </div>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-image">🍽️</div>
-        <div class="project-content">
-          <h3>Auto-Entrepreneur — Gastronomie Parisienne</h3>
-          <p>Micro-entreprise active depuis juin 2023 en parallèle de l'alternance. Chef de rang dans des établissements étoilés et haut de gamme (Laurent, Café de l'Homme, Hôtel Henri IV). Gestion autonome : facturation, clients, planning. Une école de rigueur, de réactivité et de standards d'excellence.</p>
-          <div class="project-tag">Entrepreneuriat</div>
-          <div class="project-tag">Gastronomie</div>
-          <div class="project-tag">Gestion sous pression</div>
+      <div class="proj-card reveal reveal-delay-2" data-num="04">
+        <div class="proj-top">
+          <p class="proj-cat">Entrepreneuriat · Gastronomie</p>
+          <h3 class="proj-title">Auto-entrepreneur depuis juin 2023</h3>
+          <p class="proj-desc">Micro-entreprise active en parallèle de l'alternance — chef de rang en gastronomie parisienne haut de gamme (Laurent, Café de l'Homme, Hôtel Henri IV). Facturation, clients, planning gérés en autonomie totale. Une école de standards d'excellence.</p>
+        </div>
+        <div class="proj-tags">
+          <span class="proj-tag">Entrepreneuriat</span>
+          <span class="proj-tag">Haut de gamme</span>
+          <span class="proj-tag">Management</span>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Aspirations Section -->
+  <!-- ══════════════════════════════════════ ASPIRATIONS -->
   <section id="aspirations">
-    <h2 class="section-title reveal">Ce que je recherche</h2>
-    <div class="aspirations-content">
-      <div class="aspiration-item reveal">
-        <h3><span>🎯</span> Stage recherché</h3>
-        <p>Stage de 6 mois — <strong>janvier 2027 à juin 2027</strong>. Poste d'Acheteur International, Assistant Achats ou Chargé de Sourcing. Je veux un poste où on me donne des dossiers à traiter, pas à observer.</p>
-      </div>
-      <div class="aspiration-item reveal">
-        <h3><span>🌍</span> Mobilité</h3>
-        <p>Mobilité totale — France, Europe, International. J'ai postulé et avancé dans des processus à <strong>Genève</strong> (TotalEnergies) et en <strong>Guadeloupe</strong> (VINCI) en même temps. La mobilité ce n'est pas un argument de CV, c'est une réalité.</p>
-      </div>
-      <div class="aspiration-item reveal">
-        <h3><span>💡</span> Secteurs</h3>
-        <p>Energie, industrie, BTP, luxe, tech B2B — j'ai des références dans des secteurs très différents et je comprends les codes rapidement. Ce que je cherche : un environnement exigeant, des interlocuteurs variés, un vrai impact sur les coûts.</p>
-      </div>
-      <div class="aspiration-item reveal">
-        <h3><span>🚀</span> À terme</h3>
-        <p>Devenir Acheteur International senior, puis évoluer vers un rôle de management achats ou de direction des approvisionnements. L'objectif est clair : construire une expertise reconnue dans les achats internationaux.</p>
-      </div>
+    <div class="sec-header reveal">
+      <span class="sec-num">05</span>
+      <h2 class="sec-title">Objectifs</h2>
+      <div class="sec-line"></div>
     </div>
-  </section>
 
-  <!-- Blog Section -->
-  <section id="blog">
-    <h2 class="section-title reveal">Blog & Actualités</h2>
-    <div class="blog-grid">
+    <div class="asp-list">
 
-      <div class="blog-card reveal">
-        <div class="blog-date">📅 Septembre 2026</div>
-        <div class="blog-content">
-          <h3>Entrée en Master Achats Internationaux — Kedge Business School</h3>
-          <p>Après 2 ans d'alternance chez KISDIS, j'intègre le Master Manager des Achats Internationaux à Kedge (AACSB, EQUIS, AMBA). L'objectif : structurer l'expérience terrain avec une formation de haut niveau. Stage de 6 mois inclus, disponible janvier 2027.</p>
+      <div class="asp-item reveal">
+        <span class="asp-n">01</span>
+        <div class="asp-content">
+          <h3>Stage recherché</h3>
+          <p>Stage de 6 mois — <strong>janvier à juin 2027</strong>. Acheteur International, Assistant Achats ou Chargé de Sourcing. Je cherche un poste où l'on me confie de vrais dossiers, pas un rôle d'observateur.</p>
         </div>
       </div>
 
-      <div class="blog-card reveal">
-        <div class="blog-date">📅 2025 – 2026</div>
-        <div class="blog-content">
-          <h3>Python appris en 2 semaines — et ce que ça m'a appris sur l'apprentissage</h3>
-          <p>TotalEnergies m'annonce un test CoderPad. Je n'ai pas de base solide en Python. En deux semaines : pandas, normalisation, scoring pondéré. Résultat : test passé. La leçon : identifier ce qu'on doit apprendre, et l'apprendre.</p>
+      <div class="asp-item reveal reveal-delay-1">
+        <span class="asp-n">02</span>
+        <div class="asp-content">
+          <h3>Mobilité</h3>
+          <p>Totale — France, Europe, International. J'ai avancé simultanément dans des processus à <strong>Genève</strong> (TotalEnergies) et en <strong>Guadeloupe</strong> (VINCI). La mobilité n'est pas un argument de CV, c'est une réalité déjà testée.</p>
         </div>
       </div>
 
-      <div class="blog-card reveal">
-        <div class="blog-date">📅 2024 – 2026</div>
-        <div class="blog-content">
-          <h3>Ce que 2 ans de fournisseurs hors Europe m'ont appris</h3>
-          <p>Gérer des litiges fournisseurs en anglais, relancer des partenaires à l'autre bout du monde, rédiger des cahiers des charges techniques sans intermédiaire — c'est ce que j'ai fait pendant 2 ans chez KISDIS. Mon anglais s'est construit sur ce terrain, pas en cours.</p>
+      <div class="asp-item reveal reveal-delay-1">
+        <span class="asp-n">03</span>
+        <div class="asp-content">
+          <h3>Secteurs</h3>
+          <p>Énergie, industrie, BTP, luxe, aéronautique, tech B2B. Des environnements exigeants, des interlocuteurs variés, un impact direct sur les coûts. J'ai des références dans des cultures très différentes et j'en comprends les codes rapidement.</p>
+        </div>
+      </div>
+
+      <div class="asp-item reveal reveal-delay-2">
+        <span class="asp-n">04</span>
+        <div class="asp-content">
+          <h3>Trajectoire</h3>
+          <p>Acheteur International senior, puis management des achats ou direction des approvisionnements. L'objectif est précis : construire une expertise reconnue dans les achats internationaux, dans des structures de premier plan.</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- ══════════════════════════════════════ CONTACT -->
   <section id="contact">
-    <h2 class="section-title reveal">Contactez-moi</h2>
-    <div class="contact-container reveal">
-      <div class="contact-form">
-        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-light);">
-          Une opportunité de stage, un projet commun ou simplement envie d'échanger sur les achats ? Je réponds à tous les messages.
+    <div class="sec-header reveal">
+      <span class="sec-num">06</span>
+      <h2 class="sec-title">Contact</h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="contact-layout">
+
+      <div class="contact-left reveal">
+        <p class="contact-intro">
+          Vous avez une opportunité de stage, un projet ou simplement envie d'échanger sur les achats internationaux ? Je réponds à chaque message sous 24 heures.
         </p>
-        <form onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Nom complet</label>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Email</span>
+          <span class="contact-detail-value">quent78.duplessis@gmail.com</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Localisation</span>
+          <span class="contact-detail-value">Île-de-France — Mobilité totale</span>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Disponibilité</span>
+          <span class="contact-detail-value">Stage jan. – juin 2027</span>
+        </div>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/quentin-duplessis-a22562272" target="_blank" rel="noopener" class="contact-social-link">LinkedIn</a>
+          <a href="https://github.com/no-tryhard78" target="_blank" rel="noopener" class="contact-social-link">GitHub</a>
+          <a href="Cv Quentin Duplessis.pdf" download class="contact-social-link">CV PDF</a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-1">
+        <!--
+          Formsubmit.co — aucune inscription requise.
+          1ère soumission : vérifier le mail de confirmation à quent78.duplessis@gmail.com
+          Ensuite : fonctionne définitivement.
+        -->
+        <form action="https://formsubmit.co/quent78.duplessis@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Message — Portfolio Quentin Duplessis">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://no-tryhard78.github.io/portfolio2025/#contact">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="form-row">
+            <label for="name">Nom</label>
             <input type="text" id="name" name="name" required placeholder="Votre nom">
           </div>
-          <div class="form-group">
+          <div class="form-row">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+            <input type="email" id="email" name="email" required placeholder="votre.email@entreprise.com">
           </div>
-          <div class="form-group">
+          <div class="form-row">
             <label for="message">Message</label>
             <textarea id="message" name="message" required placeholder="Votre message..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
+          <button type="submit" class="btn-submit">Envoyer</button>
+          <p class="form-note">Réponse garantie sous 24h.</p>
         </form>
-
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/quentin-duplessis-a22562272" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-            <span>in</span>
-          </a>
-          <a href="mailto:quent78.duplessis@gmail.com" class="social-link" title="Email">
-            <span>@</span>
-          </a>
-          <a href="https://github.com/no-tryhard78" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-            <span>{ }</span>
-          </a>
-        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ══════════════════════════════════════ FOOTER -->
   <footer>
-    <div class="footer-quote">
-      "Le succès, c'est d'aller d'échec en échec sans perdre son enthousiasme." — Winston Churchill
-    </div>
+    <span class="footer-logo">QD</span>
     <div class="footer-links">
-      <a href="#hero">Accueil</a>
       <a href="#about">À propos</a>
       <a href="#parcours">Parcours</a>
       <a href="#skills">Compétences</a>
       <a href="#projects">Réalisations</a>
-      <a href="#blog">Blog</a>
+      <a href="#aspirations">Objectifs</a>
       <a href="#contact">Contact</a>
     </div>
-    <p style="margin-top: 2rem; opacity: 0.8;">
-      © 2026 Quentin Duplessis — Tous droits réservés
-    </p>
+    <span class="footer-copy">© 2026 Quentin Duplessis</span>
   </footer>
 
 </body>
