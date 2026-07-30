@@ -108,3 +108,27 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObserver.observe(el));
+
+// ── Scroll spy ──
+function updateScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 140;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateScrollSpy, { passive: true });
+updateScrollSpy();
