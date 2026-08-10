@@ -521,7 +521,7 @@ section { padding: 7rem 6%; }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 140px;
+  left: 168px;
   top: 0; bottom: 0;
   width: 1px;
   background: var(--border);
@@ -529,7 +529,7 @@ section { padding: 7rem 6%; }
 
 .t-item {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 168px 1fr;
   gap: 0 2.5rem;
   padding: 0 0 3rem 0;
   position: relative;
@@ -539,7 +539,7 @@ section { padding: 7rem 6%; }
 
 .t-dot {
   position: absolute;
-  left: 133px;
+  left: 161px;
   top: 6px;
   width: 14px; height: 14px;
   border-radius: 50%;
@@ -1201,7 +1201,7 @@ nav.scrolled .nav-links a.active { color: var(--gold) !important; }
 
   .timeline::before { left:0; }
   .t-item { grid-template-columns:1fr; padding-left:1.5rem; }
-  .t-meta { text-align:left; padding-bottom:0.5rem; }
+  .t-meta { text-align:left; padding-bottom:0.5rem; overflow:visible; }
   .t-dot { left:-7px; }
 
   .stats-row { grid-template-columns:1fr 1fr; }
