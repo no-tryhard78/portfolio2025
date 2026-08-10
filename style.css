@@ -228,16 +228,32 @@ nav.scrolled .menu-toggle span { background: var(--ink); }
 
 .hero-image:hover img { filter: grayscale(0%); }
 
-.hero-tag {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--gold);
-  margin-bottom: 1.2rem;
+/* Hero school logo block */
+.hero-school {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
   opacity: 0;
   animation: fade-up 1s var(--ease) 0.4s forwards;
+}
+
+.hero-school-logo {
+  height: 22px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+}
+
+.hero-school-sep,
+.hero-school-loc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.4);
 }
 
 .hero-name {
@@ -349,13 +365,26 @@ nav.scrolled .menu-toggle span { background: var(--ink); }
 
 .btn-hero-secondary {
   background: transparent;
-  color: rgba(255,255,255,0.7);
-  border-color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.5);
+  border-color: rgba(255,255,255,0.15);
 }
 
 .btn-hero-secondary:hover {
   border-color: var(--gold);
   color: var(--gold);
+}
+
+.btn-hero-linkedin {
+  background: #0A66C2;
+  color: white;
+  border-color: #0A66C2;
+}
+
+.btn-hero-linkedin:hover {
+  background: #084d96;
+  border-color: #084d96;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(10,102,194,0.4);
 }
 
 .hero-scroll {
@@ -570,6 +599,28 @@ section { padding: 7rem 6%; }
   color: var(--muted);
   line-height: 1.8;
 }
+
+/* Timeline logo row */
+.t-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.t-logo {
+  height: 18px;
+  width: auto;
+  filter: brightness(0);
+  opacity: 0.25;
+  flex-shrink: 0;
+  transition: opacity 0.3s;
+}
+
+[data-theme="dark"] .t-logo { filter: brightness(0) invert(1); }
+
+.t-item:hover .t-logo { opacity: 0.5; }
 
 .t-highlight {
   display: inline-block;
@@ -839,10 +890,51 @@ section { padding: 7rem 6%; }
   color: rgba(255,255,255,0.7);
 }
 
+/* LinkedIn CTA prominent */
+.linkedin-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 1.4rem;
+  border: 1px solid #0A66C2;
+  background: rgba(10,102,194,0.08);
+  text-decoration: none;
+  transition: all 0.3s var(--ease);
+}
+
+.linkedin-cta:hover {
+  background: #0A66C2;
+}
+
+.linkedin-cta-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4d9de0;
+  transition: color 0.3s;
+}
+
+.linkedin-cta:hover .linkedin-cta-label { color: white; }
+
+.linkedin-cta-arrow {
+  font-size: 1.1rem;
+  color: #4d9de0;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.linkedin-cta:hover .linkedin-cta-arrow {
+  color: white;
+  transform: translate(3px, -3px);
+}
+
 .contact-socials {
   display: flex;
   gap: 1.5rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .contact-social-link {
